@@ -1,4 +1,4 @@
-Configuring VSCODE so it is possible to load modules living in the project directory from other scrips not linving in project root. Example with the following structure: 
+Configuring VSCODE so it is possible to load modules living in the project directory from other scrips not living in project root. Example with the following structure: 
 ```
 PROJECT ROOT
 |_main.py
@@ -9,8 +9,9 @@ PROJECT ROOT
 ```
 	
 By default, running script.py with the following code will not work:
+```
 Import Folder1.module as mod
-
+```
 The reason is that VSCode runs scrip.py from Folder and therefore does not know  where to find Folder1. 
 
 Here is the fix. This will create two files (launch.json and settings.json). Launch.json controls settings when running the debugger and settings.json controls running python without debugger. 
